@@ -1,0 +1,86 @@
+<script>
+    if (localStorage.Rol == 2) {
+        var nombre = localStorage.User
+       // document.getElementById("nombre").innerHTML = "hol";
+    }else if (localStorage.Rol == 1) {
+        alert("El administrador no puede reservar libros.")
+        window.location.href = "../html/catalogo.html"
+    } else {
+        alert("Debe iniciar sesion")
+        window.location.href = "../html/catalogo.html"
+    }
+</script>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <title>Formulario de reserva</title>
+</head>
+
+<body class="bg-dark">
+    <div class="modal modal-sheet position-static d-block py-5">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content rounded-6 shadow">
+                <div class="modal-body col-auto">
+                    <form class="py-2">
+                        <div class="mb-3 input-group ">
+                            <label for="" class="input-group-text">*Nombre:</label>
+                            <input type="test" id="nombre" class="form-control" required>
+                        </div>
+
+                        <div class="mb-3 input-group ">
+                            <label for=""  class="input-group-text">*Correo:</label>
+                            <input type="email" id="correo" class="form-control" required>
+                        </div>
+
+                        <div class="mb-3 input-group ">
+                            <label for=""  class="input-group-text">*Numero de documento:</label>
+                            <input type="number" id="numerodoc" class="form-control" required>
+                        </div>
+
+                        <div class="mb-3 input-group ">
+                            <label for="" class="input-group-text">*Fecha de reserva:</label>
+                            <input type="date" id="fecha" class="form-control" required>
+                        </div>
+
+
+                        <div class="d-grid gap-2 d-md-block mb-2">
+                            <button type="button" class="btn btn-primary" onclick="formularioreserva()">Enviar</button>
+                            <button class="btn btn-danger" type="button" onClick="history.back()">Cancelar</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Error</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Debes iniciar sesion para poder reservar un libro.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<script src="../js/login.js"></script>
+
+</html>

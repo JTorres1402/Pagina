@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Ayuda</title>
+    
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark " aria-label="Ninth navbar example">
+        <div class="container-xl">
+            <a class="navbar-brand" href="../index.html">Biblioteca.net</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07XL"
+                aria-controls="navbarsExample07XL" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarsExample07XL">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="trabaja.html">Trabaja con nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="catalogo.html">Catalogo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contactanos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active"  href="ayuda.html">Ayuda</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <main class="container py-5">
+        <div class="modal modal-sheet position-static d-block ">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content rounded-6 shadow">
+                    <div class="modal-header border-bottom-0">
+                        <h5 class="modal-title">PQRS</h5>
+                    </div>
+                    <div class="modal-body col-auto">
+                        <form action="">
+
+                            <div class="mb-3 input-group ">
+                                <label for="" class="input-group-text">Nombre</label>
+                                <input type="test" class="form-control" id="nombre">
+                            </div>
+
+                            <div class="mb-3 input-group ">
+                                <label for="" class="input-group-text">Correo</label>
+                                <input type="email" class="form-control" id="correo">
+                            </div>
+
+                            <div class="mb-3 input-group ">
+                                <label for="" class="input-group-text">Numero de telefono</label>
+                                <input type="number" class="form-control" id="numero">
+                            </div>
+
+                            <div class="mb-3 input-group ">
+                                <label for="" class="input-group-text">Fecha</label>
+                                <input type="date" class="form-control" id="fecha">
+                            </div>
+
+                            <div class="mb-3 ">
+                                <label for="">Sexo:</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="hmn" value="Masculino" >
+                                    <label class="form-check-label" for="flexCheckIndeterminate">
+                                        Masculino
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="hmn" value="Femenino" >
+                                    <label class="form-check-label" for="flexCheckIndeterminate">
+                                        Femenino
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="hmn" value="No definido">
+                                    <label class="form-check-label" for="flexCheckIndeterminate">
+                                        No definido
+                                    </label>
+                                </div> 
+                            </div>
+
+                            <div class="mb-3 input-group ">
+                                <label for="" class="input-group-text">Peticion</label>
+                                <input type="textarea" class="form-control" id="peticion">
+                            </div>
+
+                            <label for="" class="mb-2">Cargue el archivo</label>
+                            <div class="mb-3 input-group ">
+                                <input type="file" class="form-control" id="doc">
+                            </div>
+
+                            <div class="d-grid gap-2 d-md-block mb-2">
+                                    <button type="button" class="btn btn-primary" onclick="pqrs()">Enviar</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="pt-3 mt-4 text-muted border-top text-center">
+            &copy; 2021 Biblioteca.net <br>
+            <b>Soledad, Atlántico: </b>
+            Calle 18 No. 39-100 <br>
+            <b>Barranquilla, Atlántico:</b>
+            Cra 45 No. 48-31
+        </footer>
+
+    </main>
+
+    <script src="../js/login.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
