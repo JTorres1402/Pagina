@@ -53,7 +53,7 @@ function formularioreserva() {
     localStorage.setItem('Pedido', JSON.stringify([usuario, correo, new Number(numerodoc), date]))
     message = "Se ha generardo la reserva para el dia " + date
     alert(message)
-    window.location.href = history.back()
+    window.history.back ()
   } else {
     alert("Debe ingresar todos los datos")
   }
