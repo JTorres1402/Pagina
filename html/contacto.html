@@ -7,7 +7,7 @@
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     <title>Contacto</title>
-    
+
 </head>
 
 <body class="bg-light">
@@ -22,9 +22,6 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link" href="../index.html">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="trabaja.html">Trabaja con nosotros</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="catalogo.html">Catalogo</a>
@@ -42,7 +39,7 @@
 
     <main class="container py-5">
         <div class="p-md-5 mb-4 text-black rounded bg-light shadow border">
-            <div class="col-md-11 px-0 h-100">
+            <div class="col-md-11 px-0 h-100 mb-5">
                 <p class="lead fst-italic">
                     Conoce todo acerca de nuestra ubicación, horarios de atención y datos de contacto para que puedas
                     realizar todas tus solicitudes y trámites. Comunícate con nosotros para conocer acerca de las
@@ -50,7 +47,14 @@
                     tema.
                 </p>
                 <p class="lead fst-italic">
-                    Biblioteca Nacional de Colombia Calle 24 # 5-60 / Colombia (57+ 1) 381 64 64 serviciosbnc@bibliotecafae.gov.co Horario: Lunes a viernes: 8 a. m. – 6 p. m. Sábados: 9a. m. – 4 p. m. Se permite el ingreso hasta treinta minutos antes del cierre
+                    Biblioteca Nacional de Colombia Calle 24 # 5-60
+                    Colombia (57+ 1) 381 64 64 serviciosbnc@bibliotecafae.gov.co
+                </p>
+                <p class="lead fst-italic">
+                    Horario: <br>
+                    Lunes a viernes: 8 a. m. – 6 p. m. <br>
+                    Sábados: 9a. m. – 4 p. m. <br>
+                    Se permite el ingreso hasta treinta minutos antes del cierre
                 </p>
             </div>
         </div>
@@ -60,31 +64,33 @@
                 <div class="modal-content rounded-6 shadow">
                     <div class="modal-body col-auto">
                         <form action="" class="py-2">
-                            <div class="mb-3 input-group ">
-                                <label for="" class="input-group-text">*Nombre:</label>
-                                <input type="test" id="nombre" class="form-control ">
+
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="nombre" placeholder="nombre">
+                                <label for="">Nombre</label>
                             </div>
 
-                            <div class="mb-3 input-group ">
-                                <label for="" class="input-group-text">*Correo:</label>
-                                <input type="email" id="correo" class="form-control ">
+                            <div class="form-floating mb-3">
+                                <input type="email" class="form-control" id="correo" placeholder="correo">
+                                <label for="">Correo</label>
                             </div>
 
-                            <div class="mb-3 input-group ">
-                                <label for="" class="input-group-text">*Numero de Telefono:</label>
-                                <input type="number" id="numerodoc" class="form-control ">
+                            <div class="form-floating mb-3">
+                                <input type="number" class="form-control" id="numerodoc" placeholder="numerodoc">
+                                <label for="">Numero de Telefono</label>
                             </div>
 
                             <div class="mb-3 ">
                                 <label for="">*Sexo:</label>
                                 <div class="form-check">
-                                    <input class="form-check-input" id="" type="radio" name="hmn" value="Masculino" >
+                                    <input class="form-check-input" id="" type="radio" name="hmn" value="Masculino">
                                     <label class="form-check-label" for="flexCheckIndeterminate">
                                         Masculino
                                     </label>
                                 </div>
+
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="hmn" value="Femenino" >
+                                    <input class="form-check-input" type="radio" name="hmn" value="Femenino">
                                     <label class="form-check-label" for="flexCheckIndeterminate">
                                         Femenino
                                     </label>
@@ -94,20 +100,20 @@
                                     <label class="form-check-label" for="flexCheckIndeterminate">
                                         No definido
                                     </label>
-                                </div> 
+                                </div>
                             </div>
 
-                            <div class="mb-3 input-group ">
-                                <label for="" class="input-group-text">*Mesaje:</label>
-                                <input type="textarea" id="mensaje" class="form-control ">
+                            <div class="form-floating mb-3">
+                                <textarea class="form-control" placeholder="mensaje" id="mensaje"
+                                    style="height: 80px"></textarea>
+                                <label for="">Mesaje</label>
                             </div>
 
-                            
                             <div class="d-grid gap-2 d-md-block mb-2">
                                 <button type="button" class="btn btn-primary" onclick="contacto()" data-toggle="modal"
-                                data-target="#exampleModal">Enviar</button>
+                                    data-target="#exampleModal">Enviar</button>
                             </div>
-                        </div>
+                    </div>
                     </form>
                 </div>
             </div>
@@ -115,20 +121,20 @@
 
         <div class="modal fade" id="exampleModal" tabindex="-1">
             <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title">Error</h5>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Error</h5>
+                    </div>
+                    <div class="modal-body">
+                        Debes iniciar sesion para poder reservar un libro.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                    </div>
                 </div>
-                <div class="modal-body">
-                  Debes iniciar sesion para poder reservar un libro.
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
-                </div>
-              </div>
             </div>
-          </div>
-        
+        </div>
+
 
 
         <footer class="pt-3 mt-4 text-muted border-top text-center ">

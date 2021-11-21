@@ -24,9 +24,6 @@
                         <a class="nav-link" href="../index.html">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="trabaja.html">Trabaja con nosotros</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="catalogo.html">Catalogo</a>
                     </li>
                     <li class="nav-item">
@@ -50,24 +47,24 @@
                     <div class="modal-body col-auto">
                         <form action="">
 
-                            <div class="mb-3 input-group ">
-                                <label for="" class="input-group-text">Nombre</label>
-                                <input type="test" class="form-control" id="nombre">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="nombre" placeholder="nombre">
+                                <label for="">Nombre</label>
+                            </div>
+                            
+                            <div class="form-floating mb-3">
+                                <input type="email" class="form-control" id="correo" placeholder="correo">
+                                <label for="">Correo</label>
                             </div>
 
-                            <div class="mb-3 input-group ">
-                                <label for="" class="input-group-text">Correo</label>
-                                <input type="email" class="form-control" id="correo">
+                            <div class="form-floating mb-3">
+                                <input type="number" class="form-control" id="numerodoc" placeholder="numerodoc">
+                                <label for="">Numero de Telefono</label>
                             </div>
 
-                            <div class="mb-3 input-group ">
-                                <label for="" class="input-group-text">Numero de telefono</label>
-                                <input type="number" class="form-control" id="numero">
-                            </div>
-
-                            <div class="mb-3 input-group ">
-                                <label for="" class="input-group-text">Fecha</label>
+                            <div class="mb-3 form-floating ">                
                                 <input type="date" class="form-control" id="fecha">
+                                <label for="">Fecha</label>
                             </div>
 
                             <div class="mb-3 ">
@@ -92,9 +89,10 @@
                                 </div> 
                             </div>
 
-                            <div class="mb-3 input-group ">
-                                <label for="" class="input-group-text">Peticion</label>
-                                <input type="textarea" class="form-control" id="peticion">
+                            <div class="form-floating mb-3">
+                                <textarea class="form-control" placeholder="peticion" id="peticion"
+                                    style="height: 80px"></textarea>
+                                <label for="">Peticion</label>
                             </div>
 
                             <label for="" class="mb-2">Cargue el archivo</label>
