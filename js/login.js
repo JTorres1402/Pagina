@@ -28,7 +28,7 @@ function contacto() {
   if (usuario != "" | correo != "" | numerodoc != 0 | genero != null | mensaje != "") {
     localStorage.setItem('Contacto', JSON.stringify([usuario, correo, new Number(numerodoc), genero, mensaje]))
     window.location.href = "contacto.html"
-  }else{
+  } else {
     alert('Debe ingresar todos los datos')
   }
 }
@@ -37,10 +37,10 @@ function trabaja() {
   var doc = document.getElementById("doc").value
   if (doc != "") {
     localStorage.setItem('CV', doc)
-  }else{
+  } else {
     alert('Debe montar un archivo')
   }
-  
+
 }
 
 function formularioreserva() {
@@ -53,10 +53,11 @@ function formularioreserva() {
     localStorage.setItem('Pedido', JSON.stringify([usuario, correo, new Number(numerodoc), date]))
     message = "Se ha generardo la reserva para el dia " + date
     alert(message)
-    window.history.back ()
+    window.history.back()
   } else {
-    alert("Debe ingresar todos los datos")
+    var message = "Error, debe ingresar todos los datos"
   }
+  alert(message, 'danger')
 }
 
 function pqrs() {
@@ -73,13 +74,14 @@ function pqrs() {
     }
   }
 
-  if (usuario != "" | correo != "" | numero != 0 | date != "" | genero != null| peticion != "" | doc != "") {
-    var radicado = Math.floor((Math.random()*100000)+1)
+  if (usuario != "" | correo != "" | numero != 0 | date != "" | genero != null | peticion != "" | doc != "") {
+    var radicado = Math.floor((Math.random() * 100000) + 1)
     localStorage.setItem('PQRS', JSON.stringify([usuario, correo, new Number(numero), date, genero, peticion, radicado, doc]))
-    message = "Se ha generado el PQRS con radicado: "+ radicado
+    message = "Se ha generado el PQRS con radicado: " + radicado
     alert(message)
     window.location.href = "ayuda.html"
-  }else{
+  } else {
+    
     alert('Debe ingresar todos los datos')
   }
 
@@ -97,21 +99,22 @@ function login() {
     })
 
     .then(function (data) {
+
       for (let i = 0; i < data.length; i++) {
         let dato = data[i];
         if (dato.user == user & dato.password == pass) {
           localStorage.setItem('User', user);
           localStorage.setItem('Rol', dato.rol);
-          message = "Bienvenido, " + user
           if (dato.rol == 1) {
             window.location.href = "../html/dashboard.html"
-            alert(message)
           } else {
-            alert(message)
-            window.location.href = "../index.html"     
+            window.location.href = "../index.html"
           }
+        } else {
+          var message = "Error, contraseña o usuario incorrecto"
         }
       }
+      alert(message, 'danger')
     })
 
     .catch(function (err) {

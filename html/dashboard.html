@@ -20,7 +20,9 @@
             <div class="collapse navbar-collapse" id="navbarsExample07XL">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
                     <li class="nav-item">
-                        <a class="nav-link" href="../html/formulario.html">Registrar reserva</a>
+                        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            Reservar libro
+                          </button>
                     </li>
                 </ul>
                 <div>
@@ -33,44 +35,72 @@
     <main  class="container py-3">
         <div class="p-md-5 mb-4 text-black rounded bg-light shadow border">
             <div class="col-md-12 px-0">
-                <table class="table table-hover">
+                <table id="tblreserva" class="table table-hover">
                     <thead>
                         <tr>
                           <th >Num. reserva</th>
                           <th>Nombre</th>
                           <th >Documento</th>
                           <th>Correo</th>
+                          <th>Libro</th>
                           <th>Fecha de reserva</th>                                                          
                         </tr>
                       </thead>
                       <tbody>
-                        <tr>
-                            <td>
-                                <div class="num"></div>
-                            </td>
-                            <td>
-                                <div class="nombre"></div>
-                            </td>
-                            <td>
-                                <div class="doc"></div>
-                            </td>
-                            <td>
-                                <div class="correo"></div>
-                            </td>
-                            <td>
-                                <div class="fecha"></div>
-                            </td>
-                        </tr>
+                        
                       </tbody>
                 </table>
+                
             </div>
         </div>
     </main>
 
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Reserva de libros</h5>
+            </div>
+            <div class="modal-body">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="nom" placeholder="nombre">
+                    <label for="">Nombre</label>
+                </div>
 
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="correo" placeholder="correo">
+                    <label for="">Correo</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input type="number" class="form-control" id="numerodoc" placeholder="numerodoc">
+                    <label for="">Numero de documento</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="libro" placeholder="nombre">
+                    <label for="">Libro</label>
+                </div>
+
+                <div class="mb-3 form-floating ">                
+                    <input type="date" class="form-control" id="fecha">
+                    <label for="">Fecha</label>
+                </div>
+
+                <div class="d-grid gap-2 d-md-block mb-2">
+                    <button type="button" class="btn btn-primary" id="btnregistrar">Enviar</button>
+                    <!--
+                        <button type="button" class="btn btn-primary" id="btnactualizar">Actualizar</button>
+                    -->  
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <script src="../js/logica.js"></script>
+    <script src="../js/vista.js"></script>
     <script src="../js/login.js"></script>
     <script src="../js/validaradm.js"></script>
-    <script src="../js/leerlocal.js"></script>
     <script src="../js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
