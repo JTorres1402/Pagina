@@ -1,17 +1,6 @@
-function redireccion() {
-  window.location.href = "html/login.html";
-}
 
 function cancelar() {
   window.location.href = "../"
-}
-
-function reserva() {
-  if (localStorage.User != null) {
-    window.location.href = "../html/formulario.html"
-  } else {
-
-  }
 }
 
 function contacto() {
@@ -25,39 +14,12 @@ function contacto() {
       var genero = radios[i].value
     }
   }
-  if (usuario != "" | correo != "" | numerodoc != 0 | genero != null | mensaje != "") {
+  if (usuario != "" & correo != "" & numerodoc != 0 & genero != null & mensaje != "") {
     localStorage.setItem('Contacto', JSON.stringify([usuario, correo, new Number(numerodoc), genero, mensaje]))
     window.location.href = "contacto.html"
   } else {
-    alert('Debe ingresar todos los datos')
+    alert('Debe ingresar todos los datos', 'danger')
   }
-}
-
-function trabaja() {
-  var doc = document.getElementById("doc").value
-  if (doc != "") {
-    localStorage.setItem('CV', doc)
-  } else {
-    alert('Debe montar un archivo')
-  }
-
-}
-
-function formularioreserva() {
-  var usuario = document.getElementById("nombre").value
-  var correo = document.getElementById("correo").value
-  var numerodoc = document.getElementById("numerodoc").value
-  var date = document.getElementById("fecha").value
-
-  if (usuario != "" | correo != "" | numerodoc != 0 | date != "") {
-    localStorage.setItem('Pedido', JSON.stringify([usuario, correo, new Number(numerodoc), date]))
-    message = "Se ha generardo la reserva para el dia " + date
-    alert(message)
-    window.history.back()
-  } else {
-    var message = "Error, debe ingresar todos los datos"
-  }
-  alert(message, 'danger')
 }
 
 function pqrs() {
@@ -74,19 +36,17 @@ function pqrs() {
     }
   }
 
-  if (usuario != "" | correo != "" | numero != 0 | date != "" | genero != null | peticion != "" | doc != "") {
+  if (usuario != "" & correo != "" & numero != 0 & date != "" & genero != null & peticion != "" & doc != "") {
     var radicado = Math.floor((Math.random() * 100000) + 1)
     localStorage.setItem('PQRS', JSON.stringify([usuario, correo, new Number(numero), date, genero, peticion, radicado, doc]))
     message = "Se ha generado el PQRS con radicado: " + radicado
     alert(message)
     window.location.href = "ayuda.html"
   } else {
-    
-    alert('Debe ingresar todos los datos')
+    var message = "Error, debe ingresar todos los datos"
   }
-
+  alert(message, 'danger')
 }
-
 
 
 function login() {
@@ -111,18 +71,15 @@ function login() {
             window.location.href = "../index.html"
           }
 
-        } else { 
-          var num = 1;    
+        } else {
+          var num = 1;
         }
       }
       if (num == 1) {
         var message = "Error, contraseña o usuario incorrecto"
-      alert(message, 'danger')
+        alert(message, 'danger')
       }
-     
-      
     })
-
     .catch(function (err) {
       console.log("err")
     })
