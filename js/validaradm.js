@@ -4,7 +4,6 @@ if (localStorage.Rol == 1) {
     
 }else if(localStorage.Rol == 2){
     var nombre = localStorage.User
-    console.log(nombre)
     document.getElementById("nombre").innerHTML = nombre;
     window.location.href = "../index.html"
     }else{
@@ -12,8 +11,9 @@ if (localStorage.Rol == 1) {
 }
 
 function destroy1() {
+    localStorage.removeItem('User');
+    localStorage.removeItem('Rol');
     window.location.href = "../index.html"
-    localStorage.clear();
   }
 
 

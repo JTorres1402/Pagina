@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <title>Dashboard</title>
 </head>
+
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark " aria-label="Ninth navbar example">
@@ -20,9 +22,15 @@
             <div class="collapse navbar-collapse" id="navbarsExample07XL">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
                     <li class="nav-item">
-                        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <button type="button" class="btn btn-dark" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
                             Reservar libro
-                          </button>
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button href="catalogo.html" class="btn btn-dark" onclick="window.open('catalogo.html', '_blank')">
+                            Catalogo
+                        </button>
                     </li>
                 </ul>
                 <div>
@@ -32,76 +40,117 @@
         </div>
     </nav>
 
-    <main  class="container py-3">
+    <main class="container py-3">
         <div class="p-md-5 mb-4 text-black rounded bg-light shadow border">
-            <div class="col-md-12 px-0">
+            <div class="col-12 col-md-12 px-0">
                 <table id="tblreserva" class="table table-hover">
                     <thead>
                         <tr>
-                          <th >Num. reserva</th>
-                          <th>Nombre</th>
-                          <th >Documento</th>
-                          <th>Correo</th>
-                          <th>Libro</th>
-                          <th>Fecha de reserva</th>                                                          
+                            <th>Num. reserva</th>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Documento</th>
+                            <th>Correo</th>
+                            <th>Libro</th>
+                            <th>Fecha de reserva</th>
+                            <th>Editar</th>
                         </tr>
-                      </thead>
-                      <tbody>
-                        
-                      </tbody>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
                 </table>
-                
+
             </div>
         </div>
     </main>
 
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Reserva de libros</h5>
-            </div>
-            <div class="modal-body">
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="nom" placeholder="nombre">
-                    <label for="">Nombre</label>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Reserva de libros</h5>
                 </div>
+                <div class="modal-body">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="nom" placeholder="nombre">
+                        <label for="">Nombre</label>
+                    </div>
 
-                <div class="form-floating mb-3">
-                    <input type="email" class="form-control" id="correo" placeholder="correo">
-                    <label for="">Correo</label>
-                </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="ape" placeholder="apellido">
+                        <label for="">Apellido</label>
+                    </div>
 
-                <div class="form-floating mb-3">
-                    <input type="number" class="form-control" id="numerodoc" placeholder="numerodoc">
-                    <label for="">Numero de documento</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="libro" placeholder="nombre">
-                    <label for="">Libro</label>
-                </div>
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="correo" placeholder="correo">
+                        <label for="">Correo</label>
+                    </div>
 
-                <div class="mb-3 form-floating ">                
-                    <input type="date" class="form-control" id="fecha">
-                    <label for="">Fecha</label>
-                </div>
+                    <div class="form-floating mb-3">
+                        <input type="number" class="form-control" id="numerodoc" placeholder="numerodoc">
+                        <label for="">Numero de documento</label>
+                    </div>
 
-                <div class="d-grid gap-2 d-md-block mb-2">
-                    <button type="button" class="btn btn-primary" id="btnregistrar">Enviar</button>
-                    <!--
+                    <div class="form-floating mb-3">
+                        <select class="form-select" id="libro" aria-label="Floating label select example">
+                            <option selected>Seleccione un libro</option>
+                            <option value="El hombre rebelde">El hombre rebelde</option>
+                            <option value="Fuimos canciones">Fuimos canciones</option>
+                            <option value="El hombre mas rico de babilonia">El hombre mas rico de babilonia</option>
+                            <option value="La sombra de orión">La sombra de orión</option>
+                            <option value="El arte de engañar al karma">El arte de engañar al karma</option>
+                            <option value="El medallón de fuego">El medallón de fuego</option>
+                            <option value="Nunca">Nunca</option>
+                            <option value="El italiano">El italiano</option>
+                            <option value="El juego del alma">El juego del alma</option>
+                            <option value="Laurie">Laurie</option>
+                            <option value="Últimos dias en Berlín">Últimos dias en Berlín</option>
+                            <option value="Los silencios de Hugo">Los silencios de Hugo</option>
+                            <option value="La verdad de la pandemia">La verdad de la pandemia</option>
+                            <option value="Una corte de llamas plateadas">Una corte de llamas plateadas</option>
+                            <option value="La cuenta atras para el verano">La cuenta atras para el verano</option>
+                            <option value="Los vencejos">Los vencejos</option>
+                            <option value="Existiríamos el mar">Existiríamos el mar</option>
+                            <option value="El hijo del capitan trueno">El hijo del capitan trueno</option>
+                            <option value="La novia gitana">La novia gitana</option>
+                            <option value="Diferente">Diferente</option>
+                            <option value="Las tres hermanas">Las tres hermanas</option>
+                            <option value="Reina roja">Reina roja</option>
+                            <option value="China">China</option>
+                            <option value="Miss marte">Miss marte</option>
+                            <option value="Billy summers">Billy summers</option>
+                            <option value="Hildegarda">Hildegarda</option>
+                            <option value="El cirujano de almas">El cirujano de almas</option>
+                            <option value="Encuentra tu persona vitamina">Encuentra tu persona vitamina</option>
+                            <option value="Amor platónico">Amor platónico</option>
+                            <option value="Siempre hay un precio">Siempre hay un precio</option>
+                        </select>
+                        <label for="">Libro</label>
+                    </div>
+
+                    <div class="mb-3 form-floating ">
+                        <input type="date" class="form-control" id="fecha">
+                        <label for="">Fecha</label>
+                    </div>
+
+                    <div class="d-grid gap-2 d-md-block mb-2">
+                        <button type="button" class="btn btn-primary" id="btnregistrar"
+                            data-bs-dismiss="modal">Enviar</button>
+                        <!--
                         <button type="button" class="btn btn-primary" id="btnactualizar">Actualizar</button>
-                    -->  
-                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                    -->
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                    </div>
                 </div>
             </div>
-          </div>
         </div>
-      </div>
+    </div>
     <script src="../js/logica.js"></script>
     <script src="../js/vista.js"></script>
     <script src="../js/login.js"></script>
     <script src="../js/validaradm.js"></script>
     <script src="../js/bootstrap.bundle.min.js"></script>
 </body>
-</html>
 
+</html>

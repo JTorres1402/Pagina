@@ -1,5 +1,5 @@
 var listaReserva = [
-    [2134,'Jose','1234667','jose@gmail.com','2021-11-23']
+    [2134,'Jose','Torres','1234667','jose@gmail.com', 'Fuimos canciones','2021-11-23']
 ]
 
 

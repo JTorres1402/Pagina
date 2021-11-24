@@ -110,11 +110,17 @@ function login() {
           } else {
             window.location.href = "../index.html"
           }
-        } else {
-          var message = "Error, contraseña o usuario incorrecto"
+
+        } else { 
+          var num = 1;    
         }
       }
+      if (num == 1) {
+        var message = "Error, contraseña o usuario incorrecto"
       alert(message, 'danger')
+      }
+     
+      
     })
 
     .catch(function (err) {

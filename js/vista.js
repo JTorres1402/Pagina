@@ -5,6 +5,7 @@ mostraRegistros();
 function registrar() {
     var nuevaReserva = [],
         nombre = '',
+        apellido = '',
         correo = '',
         numero = '',
         libro ='',
@@ -12,12 +13,13 @@ function registrar() {
     
     nombre = document.querySelector('#nom').value
     numero = document.querySelector('#numerodoc').value
+    apellido = document.querySelector('#ape').value
     correo = document.querySelector('#correo').value
     libro = document.querySelector('#libro').value
     fecha = document.querySelector('#fecha').value
-    var radicado = Math.floor((Math.random() * 100000) + 1);
+    var radicado = Math.floor((Math.random() * 10000) + 1);
 
-    nuevaReserva.push(radicado, nombre, numero, correo, libro, fecha);
+    nuevaReserva.push(radicado, nombre, apellido, numero, correo, libro, fecha);
     registrarReserva(nuevaReserva);
     mostraRegistros();
     limpiar()
@@ -31,11 +33,11 @@ function mostraRegistros() {
         var fila = document.createElement('tr'),
             celdanumr = document.createElement('td'),
             celdanom = document.createElement('td'),
+            celdaape = document.createElement('td'),
             celdadoc = document.createElement('td'),
             celdaemail = document.createElement('td'),
             celdalibro = document.createElement('td'),
             celdadate = document.createElement('td');
-
         var botonActualizar = document.createElement('input')
         botonActualizar.type = 'button'
 
@@ -43,14 +45,16 @@ function mostraRegistros() {
 
         celdanumr.innerHTML = reservas[i][0];
         celdanom.innerHTML = reservas[i][1];
-        celdadoc.innerHTML = reservas[i][2];
-        celdaemail.innerHTML = reservas[i][3];
-        celdalibro.innerHTML = reservas[i][4];
-        celdadate.innerHTML = reservas[i][5];
+        celdaape.innerHTML = reservas[i][2]; 
+        celdadoc.innerHTML = reservas[i][3];
+        celdaemail.innerHTML = reservas[i][4];
+        celdalibro.innerHTML = reservas[i][5];
+        celdadate.innerHTML = reservas[i][6];
         
         
         fila.appendChild(celdanumr);
         fila.appendChild(celdanom);
+        fila.appendChild(celdaape);
         fila.appendChild(celdadoc);
         fila.appendChild(celdaemail);
         fila.appendChild(celdalibro);
