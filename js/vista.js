@@ -27,8 +27,7 @@ function registrar() {
         limpiar()
         
     }else{
-      //  $('#exampleModa').modal('hide')
-        alert("erer")
+        alert("Debes ingresar todos los datos.")
     }
 
 }
@@ -59,7 +58,6 @@ function mostraRegistros() {
         celdalibro.innerHTML = reservas[i][5];
         celdadate.innerHTML = reservas[i][6];
 
-
         fila.appendChild(celdanumr);
         fila.appendChild(celdanom);
         fila.appendChild(celdaape);
@@ -67,7 +65,6 @@ function mostraRegistros() {
         fila.appendChild(celdaemail);
         fila.appendChild(celdalibro);
         fila.appendChild(celdadate);
-
 
         tbody.appendChild(fila);
     }

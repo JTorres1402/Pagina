@@ -2,7 +2,6 @@ var listaReserva = [
     [2134,'Jose','Torres','1234667','jose@gmail.com', 'Fuimos canciones','2021-11-23']
 ]
 
-
 function registrarReserva(nuevoResistro) {
     listaReserva = getRegistro()
     listaReserva.push(nuevoResistro)

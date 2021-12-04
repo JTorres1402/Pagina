@@ -16,5 +16,4 @@ window.onscroll = function(){
     }else if(scroll < 500){
         buttonUp.style.transform = "scale(0)";
     }
-
 }

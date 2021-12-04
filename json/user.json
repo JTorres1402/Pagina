@@ -1,6 +1,7 @@
 [
     {
         "user":"admin",
+        "name":"Jose T",
         "password":"admin123",
         "rol":"1"
     },

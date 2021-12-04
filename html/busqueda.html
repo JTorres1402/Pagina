@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Busqueda de libros</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark " aria-label="Ninth navbar example">
+        <div class="container-xl">
+            <a class="navbar-brand" href="../index.html">Biblioteca.net</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07XL"
+                aria-controls="navbarsExample07XL" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarsExample07XL">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="catalogo.html">Catalogo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="busqueda.html">Busqueda de libros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contactanos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ayuda.html">Ayuda</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <div class="modal-sheet position-static d-block ">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content rounded-6 shadow">
+                <div class="modal-header border-bottom-0">
+                    <h4 class="modal-title">Busqueda</h4>
+                </div>
+                <div class="modal-body col-auto">
+                    <form action="">
+                        <p>Busqueda de libros por categorias</p>
+                        <div id="alerta"></div>
+
+                        <div class="mb-3">
+                            <select class="form-select" id="categoria" aria-label="Floating label select example">
+                                <option selected>Seleccione la categoria</option>
+                                <option value="historia">Historia</option>
+                                <option value="programacion">Programacion</option>
+                                <option value="cine">Cine</option>
+                                <option value="ciencia">Ciencia</option>
+                                <option value="arte">Arte</option>
+                                <option value="comics">Comics</option>
+                            </select>
+                        </div>
+
+                        <div class="d-grid gap-2 d-md-block mb-2">
+                            <button type="button" class="btn btn-primary" onclick="getAllRequest()"
+                                data-bs-toggle="modal" data-bs-target="#exampleModal">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="pt-3 mt-4 text-muted border-top text-center ">
+        &copy; 2021 Biblioteca.net <br>
+        <b>Soledad, Atlántico: </b>
+        Calle 18 No. 39-100 <br>
+        <b>Barranquilla, Atlántico:</b>
+        Cra 45 No. 48-31
+    </footer>
+
+
+    </main>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Resultado de la busqueda</h5>            
+                </div>
+                <div class="modal-body col-auto">
+                    <div class="mb-2" id="catego"></div>           
+                    <table class="table table-hover mb-4">
+                        <thead>
+                            <tr>
+                                <th>Titulo</th>
+                                <th>Autor</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tblbusqueda">
+                            
+                        </tbody>
+
+                    </table>
+                    <div class="d-grid gap-2 d-md-block mb-2">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../js/api.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
