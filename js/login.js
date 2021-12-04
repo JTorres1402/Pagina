@@ -63,7 +63,6 @@ function login() {
       for (let i = 0; i < data.length; i++) {
         let dato = data[i];
         if (dato.user == user & dato.password == pass) {
-          
           localStorage.setItem('Rol', dato.rol);
           if (dato.rol == 1) {
             localStorage.setItem('User', dato.name);
